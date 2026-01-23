@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductCard from './ProductCard';
 
-const Home = ({  products,  onAddToCart, onToggleWishlist, isWishlisted  }) => {
+const Home = ({ products, onAddToCart, onToggleWishlist, isWishlisted }) => {
   return (
     <div className="home-container">
       <div className="home-layout">

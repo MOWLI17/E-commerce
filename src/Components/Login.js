@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import Swal from 'sweetalert2';
 import { Link, useNavigate } from 'react-router-dom';
+import loginBg from './Image/loginpage.jpg';
 
 const Login = ({ onBackToHome, onLoginSuccess }) => {
   const navigate = useNavigate();
@@ -58,7 +59,22 @@ const Login = ({ onBackToHome, onLoginSuccess }) => {
   });
 
   return (
-    <div className="loginpage">
+    <div className="loginpage" style={{
+      backgroundImage: `url(${loginBg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      minHeight: '100vh',
+      width: '100vw',
+      height: '100vh',
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      zIndex: 2000,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      overflow: 'hidden'
+    }}>
       <div className="login-page">
         <h2>Login</h2>
         <form className="form2" onSubmit={formik.handleSubmit}>

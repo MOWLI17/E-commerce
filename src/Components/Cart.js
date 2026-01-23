@@ -36,6 +36,7 @@ const Cart = ({ cart, onRemoveFromCart, onIncreaseQuantity, onDecreaseQuantity, 
   };
 
   return (
+    <div>
     <div className="cart-overlay" onClick={onClose}>
       <div className="cart-container" onClick={(e) => e.stopPropagation()}>
         <div className="cart-header">
@@ -88,7 +89,7 @@ const Cart = ({ cart, onRemoveFromCart, onIncreaseQuantity, onDecreaseQuantity, 
 
             <div className="cart-footer">
               <div className="cart-total">
-                <h3>Total: ${totalPrice.toFixed(2)}</h3>
+                <h4>Total: ${totalPrice.toFixed(2)}</h4>
                 <p>{cart.length} item(s)</p>
               </div>
               <div className="cart-actions">
@@ -114,6 +115,7 @@ const Cart = ({ cart, onRemoveFromCart, onIncreaseQuantity, onDecreaseQuantity, 
         )}
       </div>
     </div>
+  </div>
   );
 };
 
