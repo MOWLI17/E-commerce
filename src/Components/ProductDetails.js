@@ -26,7 +26,7 @@ const ProductDetails = ({ products, onAddToCart, onToggleWishlist, isWishlisted 
                 <button className="back-btn" onClick={() => navigate(-1)}>
                     <ArrowLeft size={16} /> Back
                 </button>
-                
+
                 <div className="product-details-content">
                     {/* Image Section */}
                     <div className="product-image-wrapper">
@@ -36,7 +36,7 @@ const ProductDetails = ({ products, onAddToCart, onToggleWishlist, isWishlisted 
                     {/* Info Section */}
                     <div className="product-info-wrapper">
                         <h1 className="detail-title">{product.name}</h1>
-                        
+
                         <div className="detail-meta">
                             <div className="detail-rating">
                                 <span className="stars">{'★'.repeat(Math.round(product.rating))}</span>
@@ -52,17 +52,17 @@ const ProductDetails = ({ products, onAddToCart, onToggleWishlist, isWishlisted 
                         <p className="detail-description">{product.description}</p>
 
                         <div className="detail-actions">
-                            <button 
+                            <button
                                 className="action-btn cart-btn"
                                 onClick={() => onAddToCart(product)}
                             >
                                 <ShoppingCart size={16} /> Add to Cart
                             </button>
-                            <button 
+                            <button
                                 className={`action-btn wishlist-btn ${isLiked ? 'active' : ''}`}
                                 onClick={() => onToggleWishlist(product)}
                             >
-                                <Heart size={16} fill={isLiked ? "currentColor" : "none"} /> 
+                                <Heart size={16} fill={isLiked ? "currentColor" : "none"} />
                                 {isLiked ? 'In Wishlist' : 'In Wishlist'}
                             </button>
                         </div>
@@ -82,37 +82,8 @@ const ProductDetails = ({ products, onAddToCart, onToggleWishlist, isWishlisted 
                 </div>
             </div>
 
-            {/* Service/Features Banner */}
-            <div className="service-features-banner">
-                <div className="feature-item">
-                    <div className="feature-icon-box"><Truck size={24} /></div>
-                    <div className="feature-text">
-                        <h3>Free Shipping</h3>
-                        <p>On orders over $50</p>
-                    </div>
-                </div>
-                <div className="feature-item">
-                    <div className="feature-icon-box"><ShieldCheck size={24} /></div>
-                    <div className="feature-text">
-                        <h3>Secure Payment</h3>
-                        <p>100% secure payment</p>
-                    </div>
-                </div>
-                <div className="feature-item">
-                    <div className="feature-icon-box"><HeartHandshake size={24} /></div>
-                    <div className="feature-text">
-                        <h3>24/7 Support</h3>
-                        <p>Dedicated support</p>
-                    </div>
-                </div>
-                <div className="feature-item">
-                    <div className="feature-icon-box"><CreditCard size={24} /></div>
-                    <div className="feature-text">
-                        <h3>Easy Returns</h3>
-                        <p>30 day return policy</p>
-                    </div>
-                </div>
-            </div>
+
+            {/* Service/Features Banner is handled by the Footer globally */}
         </div>
     );
 };

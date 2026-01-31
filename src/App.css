@@ -3494,3 +3494,343 @@ button:hover {
 .category-item:hover {
   transform: translateY(-3px) scale(1.05);
 }
+
+/* ============================================
+   NEW PRODUCT DETAILS STYLES (PERFECTION)
+   ============================================ */
+
+.product-page {
+  background-color: white;
+  min-height: 100vh;
+  padding-bottom: 0;
+}
+
+.product-details-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+/* Back Button */
+.back-btn {
+  background: transparent;
+  border: none;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  transition: transform 0.2s;
+}
+
+.back-btn:hover {
+  transform: translateX(-5px);
+}
+
+/* Layout */
+.product-details-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Image Section */
+.product-image-wrapper {
+  background-color: #ffd814;
+  /* Yellow background to match screenshot */
+  border-radius: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  padding: 2rem;
+}
+
+.main-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* Contain to show the whole product */
+  transition: transform 0.5s ease;
+  mix-blend-mode: multiply;
+  /* Try to blend if white bg, but usually not needed for unsplash */
+}
+
+/* Specific override for the headphones if I knew the ID, but for now generic */
+
+.product-image-wrapper:hover .main-product-image {
+  transform: scale(1.05);
+}
+
+/* Info Section */
+.product-info-wrapper {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111;
+  margin: 0;
+  line-height: 1.1;
+  font-family: 'Arial', sans-serif;
+}
+
+.detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.detail-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars {
+  color: #111;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.review-count {
+  color: #666;
+}
+
+.detail-category {
+  color: #888;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+}
+
+.detail-price {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.detail-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 90%;
+  margin-bottom: 1.5rem;
+}
+
+/* Actions */
+.detail-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 20px;
+  /* Pill shape */
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid #ddd;
+}
+
+.cart-btn {
+  background-color: #f0f2f5;
+  color: #333;
+  border-color: #d1d5db;
+}
+
+.cart-btn:hover {
+  background-color: #e4e6e9;
+}
+
+.wishlist-btn {
+  background-color: transparent;
+  color: #333;
+  border-color: transparent;
+}
+
+.wishlist-btn:hover {
+  background-color: #f9f9f9;
+}
+
+.wishlist-btn.active {
+  color: #ef4444;
+}
+
+/* Small Benefits (under actions) */
+.detail-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.benefit-icon {
+  color: #f59e0b;
+}
+
+.benefit-item:nth-child(1) .benefit-icon {
+  color: #f97316;
+}
+
+.benefit-item:nth-child(2) .benefit-icon {
+  color: #3b82f6;
+}
+
+.benefit-item:nth-child(3) .benefit-icon {
+  color: #10b981;
+}
+
+
+/* Service Banner (Dark Blue) */
+.service-features-banner {
+  background-color: #1a202c;
+  /* distinct dark background */
+  padding: 3rem 15%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feature-icon-box {
+  background-color: #3b82f6;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+  flex-shrink: 0;
+}
+
+.feature-text h3 {
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 0.2rem 0;
+}
+
+.feature-text p {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .product-details-content {
+    grid-template-columns: 1fr;
+  }
+
+
+  .service-features-banner {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+}
+
+/* ============================================
+   FOOTER FEATURES BAR (Redefined to match Product Page Perfection)
+   ============================================ */
+.features-bar {
+  background-color: #1a202c;
+  /* Dark Slate Blue */
+  padding: 3rem 0;
+  border-bottom: 1px solid #2d3748;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.features-bar .feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.features-bar .feature-icon {
+  background-color: #3b82f6;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.features-bar .feature-item h4 {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem 0;
+}
+
+.features-bar .feature-item p {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* Responsive Features Bar */
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
