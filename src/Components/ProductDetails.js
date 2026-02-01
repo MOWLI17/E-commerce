@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Truck, ShieldCheck, HeartHandshake, CreditCard, ShoppingCart, Heart, ArrowLeft } from 'lucide-react';
+import { Truck, ShieldCheck, HeartHandshake, ShoppingCart, Heart, ArrowLeft } from 'lucide-react';
 
 const ProductDetails = ({ products, onAddToCart, onToggleWishlist, isWishlisted }) => {
     const { id } = useParams();
